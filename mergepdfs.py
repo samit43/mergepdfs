@@ -2,7 +2,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 import click
 
 @click.command()
-@click.option("-o", "--out", type=click.File("wb"), required=True, nargs=1)
+@click.option("-o", "--output", type=click.File("wb"), required=True, nargs=1)
 @click.argument("inputs", type=click.File("rb"), nargs=-1)
 def cli(inputs, output):
     """Merge PDFs."""
