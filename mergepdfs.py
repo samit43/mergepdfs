@@ -4,7 +4,7 @@ import click
 @click.command()
 @click.option("-o", "--out", type=click.File("wb"), required=True, nargs=1)
 @click.argument("inputs", type=click.File("rb"), nargs=-1)
-def merge_pdfs(inputs, output):
+def cli(inputs, output):
     """Merge PDFs."""
     # thnx https://realpython.com/pdf-python/#how-to-merge-pdfs
     pdf_writer = PdfFileWriter()
